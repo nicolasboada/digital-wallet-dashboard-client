@@ -1,0 +1,245 @@
+:root {
+  --header-height: 120px;
+  --header-title: #21325b;
+  --warning-color: #ffe7ba;
+  --fav-color: #3498db;
+  --lighter-gray: rgb(245, 245, 245);
+  --light-gray-border: rgb(230, 230, 230);
+  --white: #fff;
+  --fg: #000;
+  --bg: rgb(251, 251, 251);
+  --gray: #888;
+  --gray-darker: #6f6f6f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: var(--lighter-gray);
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: 1px solid var(--light-gray-border);
+  box-shadow: 0 1px 10px rgba(151,164,175,.1);
+}
+
+main {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - var(--header-height));
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.header_title{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--header-title);
+}
+
+.header_form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.header_form input {
+  height: 30px;
+  width: 300px;
+  border-radius: 100px;
+  border: 1px solid gray;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.header_form button {
+  position: relative;
+  top: 2px;
+  right: 25px;
+  appearance: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+}
+
+.header_options {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 600px;
+}
+
+.header_options_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_options_left span:nth-child(1) {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.header_options_left span:nth-child(2) {
+  padding-right: 5px;
+}
+
+.header_options_left form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_options_left form input{
+  height: 20px;
+  font-size: 16px;
+  width: 80px;
+  margin-right: 3px;
+}
+
+.header_options_left_edit_icon {
+  cursor: pointer;
+}
+
+.header_options_left_check_icon {
+  color: green;
+  cursor: pointer;
+}
+
+.header_options_left_close_icon {
+  color: red;
+  cursor: pointer;
+}
+
+.header_options_right {
+  display: flex;
+  justify-content: center;
+  text-align: right;
+  appearance: none;
+}
+
+.header_options_right div {
+  padding-bottom: 5px;
+}
+
+.header_options_right label {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+.wallet_card {
+  background-color: var(--white);
+  font-weight: 300;
+  border: 1px solid var(--light-gray-border);
+  max-width: 1200px;
+  width: 600px;
+  margin-top: 15px;  
+  padding: 5px 0;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 .5rem 1.2rem rgba(189,197,209,.2);
+}
+
+.wallet_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.wallet_card_header div:nth-child(1) {
+  color: var(--gray-darker);
+  font-weight: bold;
+}
+
+.wallet_card_header div:nth-child(1) span {
+  color: var(--gray-darker);
+  font-weight: 400;
+}
+
+.wallet_card_header div:last-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet_card_header_fillStar_icon {
+  color: var(--fav-color);
+  cursor: pointer;
+}
+
+.wallet_card_header_outlineStar_icon {
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.wallet_card_header_outlineStar_icon:hover {
+  color: var(--fav-color);
+}
+
+.wallet_card_header_close_icon {
+  color: var(--gray);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.wallet_card_header_close_icon:hover {
+  color: var(--fg);
+}
+
+.wallet_card_row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.wallet_card_row span:nth-child(1) {
+  min-width: 100px;
+}
+.wallet_card_small{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.wallet_card_info_old{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--warning-color);
+  border-radius: 5px;
+  width: fit-content;
+  padding: 2px 10px;
+  box-shadow: 0 .5rem 1.2rem rgba(189,197,209,.2);
+}
+
+.wallet_card_info_old svg{
+  margin-right: 5px;
+}
